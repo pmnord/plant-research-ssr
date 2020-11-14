@@ -1,0 +1,96 @@
+.plant-details {
+  width: 100%;
+}
+
+.plant-details__innerdiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.plant-details__images {
+  margin-right: 0.5em;
+  text-align: right;
+  width: 50%;
+}
+
+.plant-details__img {
+  height: 7em;
+  max-width: 157px;
+  border: solid 1px var(--black);
+  border-radius: 5px;
+  margin: 0.2em;
+}
+
+.plant-details__img:hover {
+  cursor: pointer;
+}
+
+.plant-details h2 {
+  font-size: 0.8em;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  padding: 0.2em;
+  border-radius: 2px;
+  text-align: center;
+  background-color: hsl(73, 60%, 88%);
+}
+
+.plant-details__details {
+  text-align: left;
+}
+
+.detail__label {
+  color: hsl(0, 0%, 45%);
+  font-size: .9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.detail__content {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.plant-details__raw-data-button {
+  padding: 0.2em;
+  font-size: 0.8em;
+}
+
+.plant-details__loading {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-device-width: 814px) {
+  .plant-details__images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-right: 2em;
+    justify-content: flex-end;
+  }
+
+  .plant-details__img {
+    height: 14em;
+    max-width: none;
+    border: solid 1px var(--black);
+    border-radius: 5px;
+    margin: 0.2em;
+  }
+}
+
+@media screen and (max-width: 813px) {
+  .plant-details__innerdiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plant-details__raw-data-button {
+    margin-top: 2rem;
+  }
+}

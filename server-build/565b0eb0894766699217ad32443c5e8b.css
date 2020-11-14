@@ -1,0 +1,7 @@
+// Imports
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".tooltip {\r\n  position: relative;\r\n  display: inline-block;\r\n  margin: 0 0.2rem;\r\n  font-size: 0.8rem;\r\n}\r\n\r\n.tooltip__box {\r\n  position: absolute;\r\n  top: -25;\r\n  width: 12rem;\r\n  background-color: white;\r\n  color: hsl(0, 0%, 40%);\r\n  border-radius: 5px;\r\n  padding: .4rem;\r\n  box-shadow: 0 0 3px rgba(51, 51, 51, 0.3);\r\n}", ""]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;
