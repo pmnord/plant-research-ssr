@@ -27,7 +27,7 @@ export default class PlantDetails extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     const trefle_id = this.props.router.match.params.plant_id;
 
     fetch(`${config.API_ENDPOINT}/plant/${trefle_id}`, {
@@ -74,7 +74,7 @@ export default class PlantDetails extends React.Component {
       .join(" ");
   }
 
-  handleAddPlant() {
+  handleAddPlant = () => {
     // Add a plant to the user's garden
     const {
       scientific_name,
@@ -138,7 +138,7 @@ export default class PlantDetails extends React.Component {
     return `<ul>${listItems}</ul>`;
   }
 
-  toggleRawData() {
+  toggleRawData = () => {
     return this.setState({ raw_data: !this.state.raw_data });
   }
 

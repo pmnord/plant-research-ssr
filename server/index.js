@@ -9,7 +9,7 @@ import { StaticRouter } from "react-router-dom";
 import App from "../src/App.js";
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   const reactApp = ReactDOMServer.renderToString(
@@ -38,7 +38,7 @@ app.listen(PORT, () => {
   console.log(
     "-------------------------------------------------------\n| View your SSR React app at ",
     "\x1b[36m",
-    "http://localhost:8000",
+    `http://localhost:${PORT}`,
     "\x1b[0m",
     "|\n-------------------------------------------------------"
   );

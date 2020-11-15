@@ -18,7 +18,7 @@ export default class PlantSearchRoute extends React.Component {
     };
   }
 
-  handleSearchSubmit(e) {
+  handleSearchSubmit = (e) => {
     e.preventDefault();
     this.setState({ error: null, loading: true, searchResults: [] });
 

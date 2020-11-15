@@ -9,7 +9,7 @@ import TabBar from "../../components/TabBar/TabBar";
 
 // The Garden page renders a grid of a user's plants and provides ways to interact with those plants
 // It represents the current state of a user's plant collection in the database
-export default class Garden extends React.Component {
+class Garden extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +21,7 @@ export default class Garden extends React.Component {
   }
 
   // Retrieve a user's plants and set them in the component state
-  componentDidMount() {
+  componentDidMount = () => {
     this._isMounted = true;
     this._isMounted &&
       ApiService.getUserPlants()
@@ -33,11 +33,11 @@ export default class Garden extends React.Component {
         .catch((err) => this._isMounted && this.setState({ error: err }));
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     this._isMounted = false;
   }
 
-  updateNote(e, idx) {
+  updateNote = (e, idx) => {
     const newValue = e.target.value;
     const newState = { plants: [...this.state.plants] };
     newState.plants[idx].note = newValue;
@@ -45,7 +45,7 @@ export default class Garden extends React.Component {
     this.setState(newState);
   }
 
-  updateDbNote(e, instance_id) {
+  updateDbNote = (e, instance_id) => {
     const updateValues = {
       note: e.target.value,
     };
@@ -53,7 +53,7 @@ export default class Garden extends React.Component {
     ApiService.updatePlantInstance(instance_id, updateValues);
   }
 
-  updateWatered(idx) {
+  updateWatered = (idx) => {
     const newState = { plants: [...this.state.plants] };
     newState.plants[idx].watered_date = moment().format("MMMM Do h:mm a");
     const newWateredDate = newState.plants[idx].watered_date;
@@ -70,14 +70,14 @@ export default class Garden extends React.Component {
     ApiService.updatePlantInstance(plantInstanceId, updateValues);
   }
 
-  addPlant(newPlant) {
+  addPlant = (newPlant) => {
     const newPlants = [...this.state.plants];
     newPlants.push(newPlant);
     const newState = { plants: newPlants };
     this.setState(newState);
   }
 
-  deletePlant(instanceId) {
+  deletePlant = (instanceId) => {
     const plants = this.state.plants.filter(
       (plant) => plant.instance_id !== instanceId
     );
@@ -85,7 +85,7 @@ export default class Garden extends React.Component {
   }
 
   // Filters plants in the grid display without altering them
-  filterPlants(e) {
+  filterPlants = (e) => {
     const query = e.target.value.toLowerCase();
 
     const filteredPlants = this.state.plantsCache.filter((plant) =>
@@ -135,3 +135,5 @@ export default class Garden extends React.Component {
     );
   }
 }
+
+export default Garden;

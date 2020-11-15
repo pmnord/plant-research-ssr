@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   // Keeps the Header component in sync with whether the user is logged in or not for conditional rendering purposes
-  updateLoggedIn(username) {
+  updateLoggedIn = (username) => {
     this.setState({ loggedIn: TokenService.hasToken(), username });
   };
 
