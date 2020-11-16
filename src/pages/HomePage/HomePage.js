@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import apiService from '../../services/apiService.js';
+import tokenService from '../../services/tokenService.js';
 
 import "./HomePage.css";
 
@@ -7,6 +9,22 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 
 // Homepage consisting of the pitch, the Registration component and Login component
 export default function HomeRoute(props) {
+  const [error, setError] = useState('');
+
+  const logInAsDemo = () => {
+    apiService.logInUser('demo', 'password')
+      .then((res) => {
+        tokenService.setToken(res.authToken); // The server provides a JWT auth token
+        props.updateLoggedIn('demo');
+        props.router.history.push(`/collection`);
+      })
+      .catch((err) => {
+        err.error
+          ? setError(err.error)
+          : setError('Unable to log in at this time')
+      });
+  }
+
   return (
     <div className="HomeRoute">
       <div className="HomeRoute__pitch">
@@ -19,7 +37,8 @@ export default function HomeRoute(props) {
           collection. Plant Researcher empowers you to quickly gather a
           collection of data on the species that interest you.
         </h3>
-        <button className="btn">Click Here to access the demo account</button>
+        <button className="btn" onClick={logInAsDemo}>Click Here to access the demo account</button>
+        <p className='error'>{error}</p>
       </div>
       <div className="HomeRoute__authentication">
         <RegistrationForm
