@@ -2,14 +2,14 @@ import React from "react";
 import ApiService from "../../services/apiService";
 import moment from "moment";
 
-import "./GardenPage.css";
+import "./CollectionPage.css";
 
 import PlantCard from "../../components/PlantCard/PlantCard";
 import TabBar from "../../components/TabBar/TabBar";
 
-// The Garden page renders a grid of a user's plants and provides ways to interact with those plants
+// The Collection page renders a grid of a user's plants and provides ways to interact with those plants
 // It represents the current state of a user's plant collection in the database
-class Garden extends React.Component {
+class Collection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -136,4 +136,4 @@ class Garden extends React.Component {
   }
 }
 
-export default Garden;
+export default Collection;

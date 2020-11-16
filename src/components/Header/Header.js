@@ -35,7 +35,7 @@ const Header = (props) => {
       <nav className='header__nav'>
         <h1>
           {/* Redirects based on Public or Protected route */}
-          <Link to='/'>Fancy Plants</Link>
+          <Link to='/'>Plant Researcher</Link>
         </h1>
         {/* Conditionally render Login or Logout */}
         <div className='header__right'>

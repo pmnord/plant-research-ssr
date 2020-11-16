@@ -1,7 +1,7 @@
 import config from "../config";
 
 let TokenService;
-if (typeof window === 'undefined') {
+if (typeof window === 'undefined') { // Enables SSR code to run without `window` in its environment
   TokenService = {
     setToken: () => {},
     getToken: () => {},

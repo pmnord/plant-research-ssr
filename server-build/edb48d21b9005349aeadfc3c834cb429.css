@@ -1,0 +1,8 @@
+// Imports
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".header__right {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.header a {\r\n  text-decoration: none;\r\n  color: var(--black);\r\n}\r\n\r\n.header h1 {\r\n  font-family: 'Dancing Script', cursive;\r\n  font-size: 2rem;\r\n  margin: 0;\r\n  margin-left: 0.5rem;\r\n}\r\n\r\n.header__nav {\r\n  max-width: 1000px;\r\n  margin: 1rem auto;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}", ""]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

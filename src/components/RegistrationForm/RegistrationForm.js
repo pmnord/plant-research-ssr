@@ -86,7 +86,7 @@ export default class RegistrationForm extends React.Component {
       .then((res) => {
         TokenService.setToken(res.authToken);
         this.props.updateLoggedIn();
-        this.props.router.history.push(`/garden`);
+        this.props.router.history.push(`/collection`);
       })
       .catch((err) => {
         this.setState({

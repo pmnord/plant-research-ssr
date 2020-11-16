@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
       .then((res) => {
         tokenService.setToken(res.authToken); // The server provides a JWT auth token
         this.props.updateLoggedIn(username);
-        this.props.router.history.push(`/garden`);
+        this.props.router.history.push(`/collection`);
       })
       .catch((err) => {
         this.setState({

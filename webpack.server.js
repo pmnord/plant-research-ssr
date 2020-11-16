@@ -21,7 +21,7 @@ module.exports = {
           {loader: "file-loader"},
           {loader: "css-loader"},
         ]
-      }
+      },
     ],
   },
 };

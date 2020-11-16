@@ -8,8 +8,8 @@ const TabBar = ({ children, location }) => {
 
   return (
     <div className="tab-bar">
-      <Link to="/garden">
-        <button className="tab-bar__tab tab-bar__tab--first" disabled={path === '/garden'}>Collection</button>
+      <Link to="/collection">
+        <button className="tab-bar__tab tab-bar__tab--first" disabled={path === '/collection'}>Collection</button>
       </Link>
       <Link to="/plant">
         <button className="tab-bar__tab" disabled={path === '/plant'}>Plant Search</button>

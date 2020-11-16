@@ -28,7 +28,7 @@ export default function PlantSearchListItem(props) {
       .then((res) =>
         !res.ok
           ? res.json().then((e) => Promise.reject(e))
-          : props.push("/garden")
+          : props.push("/collection")
       )
       .catch((res) => console.log(res.error));
   }
@@ -65,7 +65,7 @@ export default function PlantSearchListItem(props) {
           <button className="btn">See Details</button>
         </Link>
         <button className="btn" onClick={handleAddPlant}>
-          Add to Garden
+          Add to Collection
         </button>
       </div>
     </li>

@@ -1,0 +1,7 @@
+// Imports
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".footer {\r\n  font-size: 0.8em;\r\n  width: 100%;\r\n  text-align: center;\r\n\r\n}\r\n\r\n.footer p {\r\n  margin: 1rem;\r\n}\r\n\r\n.footer a {\r\n  color: hsl(120, 20%, 42%);\r\n}\r\n\r\n.footer__source a {\r\n  text-decoration: none;\r\n  font-weight: 700;\r\n  color: hsl(0, 0%, 10%);\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.footer__source {\r\n  margin: 0 auto;\r\n}\r\n\r\n.footer__source-svg {\r\n  padding-right: 0.5rem;\r\n  color: hsl(120, 20%, 42%);\r\n}", ""]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import PlantSearchPage from './pages/PlantSearchPage/PlantSearchPage';
 import PlantDetailsPage from './pages/PlantDetailsPage/PlantDetailsPage';
-import GardenPage from './pages/GardenPage/GardenPage';
+import CollectionPage from './pages/CollectionPage/CollectionPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import HomePage from './pages/HomePage/HomePage';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
@@ -59,8 +59,8 @@ class App extends React.Component {
                 )}
               />
               <PrivateRoute
-                path={'/garden'}
-                component={(router) => <GardenPage router={router} />}
+                path={'/collection'}
+                component={(router) => <CollectionPage router={router} />}
               />
               <PrivateRoute
                 exact

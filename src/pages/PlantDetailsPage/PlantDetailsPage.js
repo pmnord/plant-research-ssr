@@ -75,7 +75,7 @@ export default class PlantDetails extends React.Component {
   }
 
   handleAddPlant = () => {
-    // Add a plant to the user's garden
+    // Add a plant to the user's collection
     const {
       scientific_name,
       common_name,
@@ -118,7 +118,7 @@ export default class PlantDetails extends React.Component {
       .then((res) =>
         !res.ok
           ? res.json().then((e) => Promise.reject(e))
-          : this.props.router.history.push("/garden")
+          : this.props.router.history.push("/collection")
       )
       .catch((res) => console.log(res.error));
   }
@@ -204,7 +204,7 @@ export default class PlantDetails extends React.Component {
 
             {!this.state.loading && (
               <button className="btn" onClick={this.handleAddPlant}>
-                Add to Garden
+                Add to Collection
               </button>
             )}
           </div>

@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import GardenRoute from './GardenPage';
+import CollectionPage from './CollectionPage';
 
-it('Renders the GardenRoute component', () => {
+it('Renders the CollectionPage component', () => {
     const div = document.createElement('div');
 
     ReactDOM.render(
         <BrowserRouter>
-            <GardenRoute />
+            <CollectionPage />
         </BrowserRouter>
         , div);
 
