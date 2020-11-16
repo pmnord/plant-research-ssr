@@ -358,7 +358,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst config = {\n  API_ENDPOINT: \"http://localhost:8000/api\",\n  API_KEY: process.env.REACT_APP_FANCYPLANTS_API_KEY,\n  TREFLE_API_KEY: process.env.TREFLE_API_KEY,\n  TOKEN_KEY: `Authorization`\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (config);\n\n//# sourceURL=webpack:///./src/config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst config = {\n  API_ENDPOINT: process.env.REACT_APP_ENVIRONMENT === \"development\" ? \"http://localhost:8000/api\" : process.env.REACT_APP_API_ENDPOINT,\n  API_KEY: process.env.REACT_APP_API_KEY,\n  TREFLE_API_KEY: process.env.TREFLE_API_KEY,\n  TOKEN_KEY: \"Authorization\"\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (config);\n\n//# sourceURL=webpack:///./src/config.js?");
 
 /***/ }),
 
