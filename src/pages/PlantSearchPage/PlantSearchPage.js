@@ -40,7 +40,7 @@ export default class PlantSearchRoute extends React.Component {
         <h2 className="hidden">Plant Explorer</h2>
         <div>
           <h3 className="plant-search__disclaimer">
-            Search every plant in the world (almost)!
+            Search the Trefle.io botanical database
           </h3>
         </div>
 
